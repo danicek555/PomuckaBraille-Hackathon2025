@@ -9,7 +9,11 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.IO;
-using System.Speech.Synthesis;
+using Windows.Media.SpeechSynthesis;
+using Windows.Media.Playback;
+using Windows.Storage.Streams;
+using Windows.Media.Core;
+using MediaPlayer = Windows.Media.Playback.MediaPlayer;
 
 namespace Braill
 {
@@ -22,22 +26,19 @@ namespace Braill
         bool isDarkMode = false;
         string adresaMB = "";
         string obsahSouboru = "";
-        SpeechSynthesizer synth;
+
 
         public MainWindow()
         {
             InitializeComponent();
-            synth = new SpeechSynthesizer();
-            synth.SelectVoice("Microsoft Zuzana");
-           
-            
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            detekovan = false;
             foreach (var drive in DriveInfo.GetDrives())
             {
-               if(drive.VolumeLabel == "Kingston")
+               if(drive.VolumeLabel == "MICROBIT")
                 {
                     detekovan = true;
                     adresaMB = drive.RootDirectory.ToString();
@@ -45,8 +46,19 @@ namespace Braill
             }
             if (detekovan)
             {
-                obsahSouboru = File.ReadAllText(adresaMB + "DATA.txt");
+                try
+                {
+                    obsahSouboru = File.ReadAllText(adresaMB + "DATA.txt");
+                }
+                catch (Exception vyjimka)
+                {
+                    MessageBox.Show("CONNECTION SUCCESSFUL\n\nError - data file not found");
+                }
                 tbxObsah.Text = obsahSouboru;
+            }
+            else
+            {
+                tbxObsah.Text = "MICROBIT NOT FOUND - PLEASE CONNECT VIA USB.";
             }
         }
 
@@ -110,16 +122,24 @@ namespace Braill
             }
         }
 
-        private void Button_Click_2(object sender, RoutedEventArgs e)
+        private async void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            // Initialize a new instance of the SpeechSynthesizer.
-            
+            var synthesizer = new SpeechSynthesizer();
 
-            // Configure the audio output.
-            synth.SetOutputToDefaultAudioDevice();
+            // Najdi hlas "Jakub"
+            var czVoice = SpeechSynthesizer.AllVoices
+                .FirstOrDefault(v => v.Language == "cs-CZ" && v.DisplayName.Contains("Jakub"));
 
-            // Speak a string, synchronously
-            synth.Speak(obsahSouboru);
+            if (czVoice != null)
+                synthesizer.Voice = czVoice;
+
+            // Vytvoř stream řeči
+            SpeechSynthesisStream stream = await synthesizer.SynthesizeTextToStreamAsync(obsahSouboru);
+
+            // Přehrát výstup
+            var player = new MediaPlayer();
+            player.Source = MediaSource.CreateFromStream(stream, stream.ContentType);
+            player.Play();
         }
     }
 }
