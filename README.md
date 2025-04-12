@@ -35,6 +35,6 @@ Aplikace **Braill** je moderní nástroj pro komunikaci a ovládání zařízen�
 - Daniel Mitka
 - Matěj Václav Štefan
 - Samuel Vacek
-- 
-🏫 [Stránka autorů](https://gymjs.cz)
+  
+🏫 [**Stránka autorů**](https://gymjs.cz)
 
