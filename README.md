@@ -3,8 +3,8 @@
   <tr>
     <td><img src="photos/project_done.JPG" width="500"/></td>
     <td>
-      <h1>Pomucka Braille - Hackathon 2025</h1>
-      <p>Tato Braillovo zařízení a převádět jej na řeč v češtině. Podporuje světlý a tmavý režim.</p>
+      <h1>Pomůcka Braille - Hackathon 2025</h1>
+      <p>S tímto Braillovým zařízením se Braillovo písmo naučíte za jeden den!</p>
     </td>
   </tr>
 </table>
@@ -21,11 +21,11 @@
 - **Fotky projektu a týmu**: Ve složce [`/photos`](https://github.com/YOUR-USERNAME/Braill/tree/main/photos)
 - **Prezentace a dokumentace**: [`/documentys`](https://github.com/YOUR-USERNAME/Braill/tree/main/documentys)
 
-## 🟦 Braill
+## 🖥️ Braill
 
 Desktop aplikace **Braill** je moderní nástroj pro komunikaci a ovládání zařízení – elegantně navržená s podporou světlého a tmavého režimu.
 
-<img width="632" alt="githubreadme" src="https://github.com/user-attachments/assets/daae200f-004a-40e4-9fd2-de31703aead9" />
+<img width="500" alt="githubreadme" src="https://github.com/user-attachments/assets/daae200f-004a-40e4-9fd2-de31703aead9" />
 
 ### ❓ Jak použít
 1. **Nainstaluj si aplikaci** z odkazu níže ⬇️
@@ -48,12 +48,14 @@ Desktop aplikace **Braill** je moderní nástroj pro komunikaci a ovládání za
 
 ### 📦 Stažení Desktop Aplikace
 
-🔽 [Stáhnout poslední verzi (Braill.exe)](https://github.com/StefikMat/Braill/releases/download/1.0.0/Braille_v1.0.zip)
+- 🔽 [Stáhnout poslední verzi (Braill.exe)](https://github.com/StefikMat/Braill/releases/download/1.0.0/Braille_v1.0.zip)
 
 > _Poznámka: Před spuštěním může být nutné potvrdit oprávnění, pokud aplikaci stahujete poprvé._
+### 🚀 Spuštění 
+<pre lang="markdown"> npm install npm start </pre>
 
 ---
-### 😍 Autoři
+### 🛠️  Michalova Sekta
 - Michal Korčák
 - [Daniel Mitka](https://daniel.mitka.cz)
 - Matěj Václav Štefan
