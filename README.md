@@ -3,6 +3,7 @@
 Aplikace **Braill** je moderní nástroj pro komunikaci a ovládání zařízení – elegantně navržená s podporou světlého a tmavého režimu.
 
 <img width="632" alt="githubreadme" src="https://github.com/user-attachments/assets/daae200f-004a-40e4-9fd2-de31703aead9" />
+<img width="632" alt="UI preview" src="https://github.com/YOUR-USERNAME/Braill/raw/main/photos/project-done.jpg" />
 
 ## ❓ Jak použít
 1. **Nainstaluj si aplikaci** z odkazu níže ⬇️
