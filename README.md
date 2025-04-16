@@ -16,7 +16,7 @@
 # 🧠 Technologie
 
 - **Desktopová aplikace**: C# (WPF) [`/desktop-app`](https://github.com/YOUR-USERNAME/Braill/tree/main/desktop-app)
-- **Firmware pro Micro:bit**: Python
+- **Firmware pro Micro:bit**: Python [`/microbit code`](https://github.com/YOUR-USERNAME/Braill/tree/main/microbitcode)
 - **3D modely krabičky**: STL soubory ve složce [`/3d modely`](https://github.com/YOUR-USERNAME/Braill/tree/main/3dmodely)
 - **Fotky projektu a týmu**: Ve složce [`/photos`](https://github.com/YOUR-USERNAME/Braill/tree/main/photos)
 - **Prezentace a dokumentace**: [`/documentys`](https://github.com/YOUR-USERNAME/Braill/tree/main/documentys)
