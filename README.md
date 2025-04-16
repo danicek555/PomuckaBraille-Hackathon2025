@@ -51,8 +51,9 @@ Desktop aplikace **Braill** je moderní nástroj pro komunikaci a ovládání za
 - 🔽 [Stáhnout poslední verzi (Braill.exe)](https://github.com/StefikMat/Braill/releases/download/1.0.0/Braille_v1.0.zip)
 
 > _Poznámka: Před spuštěním může být nutné potvrdit oprávnění, pokud aplikaci stahujete poprvé._
+
 ### 🚀 Spuštění 
-<pre lang="markdown"> npm install npm start </pre>
+`npm install npm start `
 
 ---
 ### 🛠️  Michalova Sekta
